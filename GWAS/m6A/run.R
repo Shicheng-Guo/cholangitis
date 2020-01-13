@@ -3,6 +3,7 @@ wget ftp://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/CordellHJ_2639426
 wget ftp://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/JiSG_27992413_GCST004030/ipscsg2016.result.combined.full.with_header.txt
 wget https://raw.githubusercontent.com/Shicheng-Guo/m6Asnp/master/m6Asnp.txt
 
+gunzip ftp://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/CordellHJ_26394269_GCST003129/cordell_2015_26394269_pbc_efo1001486_1_gwas.sumstats.tsv.gz
 
 m6A<-read.table("https://raw.githubusercontent.com/Shicheng-Guo/m6Asnp/master/m6Asnp.txt")
 d1<-read.csv("hum0076_1stgwas_160916.csv")
@@ -23,5 +24,4 @@ cminput3<-d3[na.omit(match(as.character(m6A[,1]),as.character(d3[,2]))),c(2,1,3,
 colnames(cminput3)=c("SNP","Chromosome","Position","trait1")
 CMplot(cminput3,plot.type="b",memo="ipscsg2016",LOG10=TRUE,threshold=NULL,file="jpg",dpi=300,file.output=TRUE,verbose=TRUE,width=14,height=6)
 write.table(cminput3,file=paste("ipscsg2016.pval.manhattan.qqplot.txt",sep=""),sep="\t",quote=F,row.name=T,col.names=NA)
-
 
