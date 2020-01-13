@@ -2,7 +2,7 @@
 
 Timeline:
 
-2020/01/14: collected all the P<10^-3 and check all the genes in TCGA 
+2020/01/14: collected all the P<10^-3 and check all the genes in tcga 
 ```
 wget ftp://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/NakamuraM_23000144_GCST001685/hum0076_1stgwas_160916.csv
 wget ftp://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/CordellHJ_26394269_GCST003129/cordell_2015_26394269_pbc_efo1001486_1_gwas.sumstats.tsv.gz
